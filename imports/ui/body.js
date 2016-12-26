@@ -7,6 +7,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import './firstGraph.js';
 import './body.html';
 import './task.js';
+//import './T_table.js';
 
 //import './index.js'
 //import './myTemplate.js';
@@ -26,7 +27,14 @@ Template.body.helpers({
         // Show newest tasks at the top
         return Tasks.find({}, { sort: { createdAt: -1 } });
     },
-
+    settings: function () {
+        return {
+            collection: Tasks,
+            rowsPerPage: 10,
+            showFilter: true,
+            fields: ['username', 'text', 'checked']
+        };
+    },
     incompleteCount() {
         return Tasks.find({ checked: { $ne: true } }).count();
     },

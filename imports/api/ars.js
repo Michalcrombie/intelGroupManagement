@@ -3,28 +3,55 @@
 export const Ars = new Mongo.Collection("ars");
 
 Ars.attachSchema(new SimpleSchema({
-  title: {
+  description: {
     type: String,
-    label: "Title",
+    label: "AR description",
     max: 200
   },
-  author: {
-    type: String,
-    label: "Author"
+  srartDate: {
+      type: Date,
+      label: "Start Date",
+      optional: true
   },
-  copies: {
+  dueDate: {
+      type: Date,
+      label: "Due Date",
+      optional: true
+  },
+  catagory: {
+      type: String,
+      label: "catagory"
+  },
+  subCatagory: {
+      type: String,
+      label: "Sub Catagory"
+  },
+  owner: {
+    type: String,
+    label: "Owner"
+  },
+  seconderyOwner: {
+      type: String,
+      label: "Secondery Owner",
+      optional: true
+  },
+  priorty: {
     type: Number,
-    label: "Number of copies",
+    label: "Priorty",
     min: 0
   },
-  lastCheckedOut: {
-    type: Date,
-    label: "Last date this book was checked out",
-    optional: true
+  status: {
+      type: String,
+      label: "Status",
   },
-  summary: {
+  statusDetails: {
+      type: String,
+      label: "Status Details",
+      optional: true
+  },
+  comments: {
     type: String,
-    label: "Brief summary",
+    label: "Comments",
     optional: true,
     max: 1000
   }

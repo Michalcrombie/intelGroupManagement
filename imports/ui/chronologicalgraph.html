@@ -1,0 +1,14 @@
+﻿<template name="ChronologicalGraph">
+    <style>
+            h1 {color:#ffffff;
+            font-family: verdana;
+            font-size: 300%;
+        }
+    </style>
+    <h1>Chronological Graph</h1>
+    {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <div id="container" style="min-width: 310px; height:400px; margin:0 auto"></div>
+</template>

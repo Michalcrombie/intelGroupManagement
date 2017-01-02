@@ -1,0 +1,34 @@
+﻿<template name="AR">
+    <div class="container">
+        <style>
+            h1 {
+                color: #ffffff;
+                font-family: verdana;
+                font-size: 300%;
+            }
+        </style>
+        <header>
+          <h1>My Ar ({{incompleteCount}})</h1>
+            <label class="hide-completed">
+                <input type="checkbox" />
+                Hide Completed Tasks
+            </label>
+
+            {{#if currentUser}}
+            <form class="new-task">
+                <input type="text" name="text" placeholder="Type to add new tasks" />
+            </form>
+            {{/if}}
+        </header>
+        <ul>
+            {{#each tasks}}
+            {{> task}}
+            {{/each}}
+        </ul>
+        <!--michal-->
+        <ul>
+            {{> reactiveTable settings=settings}}
+        </ul>
+    </div>
+ </template>
+        

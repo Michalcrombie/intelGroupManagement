@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import { Ars } from '../imports/api/ars.js';
 
 Meteor.startup(() => {
     // code to run on server at startup
@@ -16,7 +17,7 @@ Meteor.startup(() => {
 
 Meteor.methods({
   insertArs: function(doc) {
-
+      Ars.insert(doc);
       console.log(doc);
     // this.unblock();
     //

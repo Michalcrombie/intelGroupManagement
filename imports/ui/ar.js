@@ -3,7 +3,10 @@ import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
  
 import { Tasks } from '../api/tasks.js';
+import { Ars } from '../api/ars.js';
+
 import './ar.html';
+
 
 
 Template.AR.onCreated(function bodyOnCreated() {
@@ -11,6 +14,9 @@ Template.AR.onCreated(function bodyOnCreated() {
 });
 
 Template.AR.helpers({
+  ars() {
+    return Ars;
+  },
     tasks() {
         const instance = Template.instance();
         if (instance.state.get('hideCompleted')) {

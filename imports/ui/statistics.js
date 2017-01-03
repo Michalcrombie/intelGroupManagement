@@ -104,7 +104,7 @@ Template.Statistics.topGenresChart = function() {
 var manipulateTasks_owner = function(tasks) {
     var result = {};
     tasks.forEach(function(task){
-        if (Meteor.userId() === task.owner){
+        if (Meteor.userId() === task.owner && !task.checked ){
             if (result[task.text]) {
                 result[task.text] ++;
             } else {

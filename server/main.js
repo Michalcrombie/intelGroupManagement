@@ -6,8 +6,8 @@ Meteor.startup(() => {
     Tasks = new Mongo.Collection("tasks");
 
   smtp = {
-    username: 'mikmik.crombie@gmail.com',
-    password: 'Eli241058',
+    username: 'intelgroupmanagment@gmail.com',
+    password: '12345678intel',
     server:   'smtp.gmail.com',
     port: 465
   }
@@ -24,7 +24,7 @@ Meteor.methods({
     // // Send the e-mail
     // Email.send({
     //   to: "kellner.rotem@gmail.com",
-    //   from: "mikmik.crombie@gmail.com",
+    //   from: "intelGroupManagment@gmail.com",
     //   subject: "Website Contact Form - Message From ",
     //   text: "sdfdsfdsdf"
     // });

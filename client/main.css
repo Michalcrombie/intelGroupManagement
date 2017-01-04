@@ -50,6 +50,8 @@ form {
   margin-top: 10px;
   margin-bottom: -10px;
   position: relative;
+  width: 70%;
+  background: transparent;
 }
  
 .new-task input {
@@ -67,7 +69,8 @@ form {
 }
  
 ul {
-  margin: 0;
+  margin: -10px;
+  width: 50%;
   padding: 0;
   background: white;
   position:relative;

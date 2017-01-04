@@ -6,6 +6,7 @@
                 font-family: verdana;
                 font-size: 300%;
             }
+
         </style>
         <header>
           <h1>My Ar ({{incompleteCount}})</h1>
@@ -26,10 +27,11 @@
             {{/each}}
         </ul>
         -->
-        <ul>
+        <form>
             {{> reactiveTable settings=settings}}
-            {{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}
-        </ul>
+        </form>
+        <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>
+        
 
     </div>
    <!-- <li class="{{#if checked}}checked{{/if}}">

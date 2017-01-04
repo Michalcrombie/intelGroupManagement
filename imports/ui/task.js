@@ -2,9 +2,9 @@
  
 import { Tasks } from '../api/tasks.js';
  
-import './task.html';
+//import './task.html';
  
-Template.task.events({
+/*Template.task.events({
     'click .toggle-checked'() {
         // Set the checked property to the opposite of its current value
         Tasks.update(this._id, {
@@ -14,4 +14,4 @@ Template.task.events({
     'click .delete'() {
         Tasks.remove(this._id);
     },
-});
+});*/

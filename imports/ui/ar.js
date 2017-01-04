@@ -17,30 +17,33 @@ Template.AR.helpers({
   ars() {
     return Ars;
   },
-    tasks() {
+   /* ars() {
         const instance = Template.instance();
         if (instance.state.get('hideCompleted')) {
             // If hide completed is checked, filter tasks
-            return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
+            return Ars.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
         }
         // Otherwise, return all of the tasks
-        return Tasks.find({}, { sort: { createdAt: -1 } });
-    },
-    settings: function(){
+        return Ars.find({}, { sort: { createdAt: -1 } });
+    },*/
+   settings: function(){
         return {
-            collection:Tasks,
+            collection:Ars,
             rowsPerPage:10,
             showFilter:true,
-            fields:['username','text','checked']
+            fields:['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner','priorty','status','statusDetails','comments']
         };
     },
+    //incompleteCount() {
+       // return Ars.find({ checked: { $ne: true } }).count();
+    //},
     incompleteCount() {
-        return Tasks.find({ checked: { $ne: true } }).count();
+        return Ars.find().count();
     },
 });
 
-Template.AR.events({
-    'submit .new-task'(event) {
+/*Template.AR.events({
+    'submit .new-ar'(event) {
         // Prevent default browser form submit
         event.preventDefault();
 
@@ -49,7 +52,7 @@ Template.AR.events({
         const text = target.text.value;
 
         // Insert a task into the collection
-        Tasks.insert({
+        Ars.insert({
             text,
             createdAt: new Date(), // current time
             owner: Meteor.userId(),
@@ -80,3 +83,15 @@ var manipulateTasks = function (tasks) {
     });
     return result;
 };
+
+Template.AR.events({
+    'click .toggle-checked'() {
+        // Set the checked property to the opposite of its current value
+        Ars.update(this._id, {
+            $set: { checked: ! this.checked },
+        });
+    },
+    'click .delete'() {
+        Ars.remove(this._id);
+    },
+});*/

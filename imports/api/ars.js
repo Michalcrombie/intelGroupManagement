@@ -20,11 +20,13 @@ Ars.attachSchema(new SimpleSchema({
   },
   catagory: {
       type: String,
-      label: "catagory"
+      label: "catagory",
+      allowedValues: ["Services","KPIs","HW"]
   },
   subCatagory: {
       type: String,
-      label: "Sub Catagory"
+      label: "Sub Catagory",
+      allowedValues: ["TLC","Thermal","DP"]
   },
   owner: {
     type: String,
@@ -43,6 +45,7 @@ Ars.attachSchema(new SimpleSchema({
   status: {
       type: String,
       label: "Status",
+      allowedValues: ["Open","In process","Done"]
   },
   statusDetails: {
       type: String,

@@ -35,6 +35,9 @@ ejson@1.0.13
 email@1.1.18
 es5-shim@4.6.15
 fastclick@1.0.13
+fortawesome:fontawesome@4.4.0_1
+fourseven:scss@3.8.1
+fullcalendar:fullcalendar@2.9.0
 geojson-utils@1.0.10
 highcharts:highcharts-meteor@0.2.3
 hot-code-push@1.0.4
@@ -83,7 +86,6 @@ reactive-var@1.0.11
 reload@1.1.11
 retry@1.0.9
 routepolicy@1.0.12
-rzymek:fullcalendar@2.7.2
 service-configuration@1.0.11
 session@1.1.7
 sha@1.0.9
@@ -97,6 +99,7 @@ templating@1.2.15
 templating-compiler@1.2.15
 templating-runtime@1.2.15
 templating-tools@1.0.5
+themeteorchef:bert@2.1.1
 tracker@1.1.1
 ui@1.0.12
 underscore@1.0.10

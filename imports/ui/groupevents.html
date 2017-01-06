@@ -1,5 +1,5 @@
 ﻿
-<template name="Groupevents">
+<template name="events">
     <style>
         h1 {
             color: #ffffff;
@@ -7,7 +7,11 @@
             font-size: 300%;
         }
     </style>
-    <h1 >Group events</h1 >
-    {{> fullcalendar }}
- </template >
+    <h1>Group events</h1>   
+    {{> addEditEventModal }}
+    <div id="events-calendar"></div>
+</template>   
+  
+        
+ 
         

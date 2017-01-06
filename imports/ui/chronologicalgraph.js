@@ -58,11 +58,7 @@ var manipulateArs = function(ars) {
     var result = [];
     ars.forEach(function(ar){
         if (Meteor.user().username === ar.owner){ 
-            //var startday=format(as.Date(ar.srartDate),"%d/%m/%Y");
-            //var endday=format(as.Date(ar.dueDate),"%d/%m/%Y");
             var dataPoint = [Date.UTC(ar.srartDate.getFullYear(),ar.srartDate.getMonth(),ar.srartDate.getDate()),Date.UTC(ar.dueDate.getFullYear(),ar.dueDate.getMonth(),ar.dueDate.getDate())];
-            
-            //var dataPoint=[Date.UTC(2013, 07, 02, 05, 10, 0), Date.UTC(2013, 10, 02, 05, 15, 0)];
             result.push(dataPoint);}})
     return result;
 };

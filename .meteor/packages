@@ -35,4 +35,8 @@ iron:router
 aldeed:autoform
 aldeed:collection2
 email
-rzymek:fullcalendar
+fullcalendar:fullcalendar
+momentjs:moment
+session
+themeteorchef:bert
+check

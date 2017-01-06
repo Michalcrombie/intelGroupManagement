@@ -29,7 +29,7 @@ Router.route('/', function () {
  });
 
  Router.route('/Groupevents', function () {
-     this.render('Groupevents');
+     this.render('events');
      this.layout('mainSide');
  });
 

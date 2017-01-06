@@ -2,3 +2,7 @@
  
 import { Tasks } from '../api/tasks.js';
 import './groupevents.html';
+
+$('#calendar').fullcalendar({
+
+})

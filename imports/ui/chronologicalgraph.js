@@ -22,16 +22,21 @@ Template.ChronologicalGraph.topGenresChart = function() {
             
         },
         yAxis: {
-            type: 'datetime',
             title: {
                 text: 'Date'
+            },
+            labels: {
+                format: '{value:%d-%m-%Y}',
+                rotation: 45,
+                align: 'left'
             }
+            
         },
 
         tooltip: {
             formatter: function () {
                 console.log(this);
-                return '<b>' + this.x + '</b> started at <b>' + Highcharts.dateFormat('%d-%m-%Y', this.point.low) + '</b> and ended at <b>' + Highcharts.dateFormat('%d-%m-%Y', this.point.high) + '</b>';
+                return '</b> started at <b>' + Highcharts.dateFormat('%d-%m-%Y', this.point.low) + '</b> and ended at <b>' + Highcharts.dateFormat('%d-%m-%Y', this.point.high) + '</b>';
             }
         },
 
@@ -41,12 +46,11 @@ Template.ChronologicalGraph.topGenresChart = function() {
 
         series: [{
             name: 'Dates',
-            data: manipulateArs(Ars.find())
-                 
+            data: manipulateArs(Ars.find()),
+            //format: {value:Date},
              //   [
             //  [Date.UTC(2013, 07, 02, 05, 10, 0), Date.UTC(2013, 10, 02, 05, 15, 0)],
              // [Date.UTC(2013, 11, 02, 05, 18, 0), Date.UTC(2013, 12, 02, 06, 10, 0)]]
-            
         }]
     }};
 
@@ -54,7 +58,10 @@ var manipulateArs = function(ars) {
     var result = [];
     ars.forEach(function(ar){
         if (Meteor.user().username === ar.owner){ 
-            var dataPoint = [ar.srartDate.getDate(),ar.dueDate.getDate()];
+            //var startday=format(as.Date(ar.srartDate),"%d/%m/%Y");
+            //var endday=format(as.Date(ar.dueDate),"%d/%m/%Y");
+            var dataPoint = [Date.UTC(ar.srartDate.getFullYear(),ar.srartDate.getMonth(),ar.srartDate.getDate()),Date.UTC(ar.dueDate.getFullYear(),ar.dueDate.getMonth(),ar.dueDate.getDate())];
+            
             //var dataPoint=[Date.UTC(2013, 07, 02, 05, 10, 0), Date.UTC(2013, 10, 02, 05, 15, 0)];
             result.push(dataPoint);}})
     return result;

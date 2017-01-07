@@ -30,7 +30,7 @@ let EventsSchema = new SimpleSchema({
     'type': {
         type: String,
         label: 'What type of event is this?',
-        allowedValues: ['Weekly meeting', 'Monthly meeting','Birthday','Wedding']
+        allowedValues: ['Weekly meeting', 'Monthly meeting','Birthday','Wedding','Other']
     },
     'guests': {
         type: Number,

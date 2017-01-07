@@ -28,24 +28,26 @@ Ars.attachSchema(new SimpleSchema({
       label: "Sub Catagory",
       allowedValues: ["TLC","Thermal","DP"]
   },
+  priorty: {
+    type: Number,
+    label: "Priorty",
+    min: 0
+  },
   owner: {
     type: String,
-    label: "Owner"
+    label: "Owner",
+    optional: true
   },
   seconderyOwner: {
       type: String,
       label: "Secondery Owner",
       optional: true
   },
-  priorty: {
-    type: Number,
-    label: "Priorty",
-    min: 0
-  },
   status: {
       type: String,
       label: "Status",
-      allowedValues: ["Open","In process","Done"]
+      allowedValues: ["Open","In process","Done"],
+      optional: true
   },
   statusDetails: {
       type: String,

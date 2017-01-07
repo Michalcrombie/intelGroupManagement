@@ -6,7 +6,6 @@ Intelusers.attachSchema(new SimpleSchema({
     employee_id: {
         type: String,
         label: "employee ID",
-        optional: true
     },
     first_name: {
         type: String,
@@ -21,20 +20,30 @@ Intelusers.attachSchema(new SimpleSchema({
     office_address: {
         type: String,
         label: "Office address",
-        optional: true
+        allowedValues: ["Haifa","Ptah Tikva"]
     },
     email_adress: {
         type: String,
         label: "Email address",
-        optional: true
     },
     qualifications: {   
         type: String,
         label: "Qualifications",
-        allowedValues: ["Developer"]
+        allowedValues: ["Services","KPIs","HW"]
+    },
+    sub_qualifications: {   
+        type: String,
+        label: "Sub Qualifications",
+        allowedValues: ["TLC","Thermal","DP"]
     },
     group_name: {
         type: String,
-        label: "Group Name"
-    }
+        label: "Group Name",
+        optional: true
+    },
+    Permission: {   
+        type: String,
+        label: "Permission",
+        allowedValues: ["Manager","Sub manager","Employee"]
+    },
 }));

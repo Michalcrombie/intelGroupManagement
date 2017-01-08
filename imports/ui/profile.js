@@ -25,4 +25,19 @@ Template.Profile.helpers({
         };
     },
     
+    //firstName: manipulateUsers(Intelusers.find()),
+   
 });
+
+/*var manipulateUsers = function(intelusers) {
+     var result = [];    
+     intelusers.forEach(function(iuser){
+         if (Meteor.userId() === iuser.first_name) {
+             var dataPoint = [iuser.first_name];
+             result.push(dataPoint);
+         }
+           
+       });
+     return result;
+};
+*/

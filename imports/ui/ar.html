@@ -6,20 +6,19 @@
                 font-family: verdana;
                 font-size: 300%;
             }
-
         </style>
         <header>
-          <h1>My Ar ({{incompleteCount}})</h1>
-           <!-- <label class="hide-completed">
-                <input type="checkbox" />
-                Hide Completed Tasks
-            </label>
+            <h1>My Ar ({{incompleteCount}})</h1>
+            <!-- <label class="hide-completed">
+                 <input type="checkbox" />
+                 Hide Completed Tasks
+             </label>
 
-            {{#if currentUser}}
-            <form class="new-task">
-                <input type="text" name="text" placeholder="Type to add new tasks" />
-            </form>
-            {{/if}}-->
+             {{#if currentUser}}
+             <form class="new-task">
+                 <input type="text" name="text" placeholder="Type to add new tasks" />
+             </form>
+             {{/if}}-->
         </header>
         <!-- <ul>
             {{#each tasks}}
@@ -31,15 +30,51 @@
             {{> reactiveTable settings=settings}}
         </form>
         <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>
-        
+        {{> addEditArModal }}
+        <div id="ar-edit"></div>
+
 
     </div>
-   <!-- <li class="{{#if checked}}checked{{/if}}">
-        <button class="delete">&times;</button>
+        <!-- <li class="{{#if checked}}checked{{/if}}">
+             <button class="delete">&times;</button>
 
-        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+             <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
 
-        <span class="text"><strong>{{username}}</strong> - {{text}}</span>
-    </li>-->
+             <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+         </li>-->
+        <!--edit
+    {{#if editing}}
+     
+            <td><input type="text" id="editdescription" value="{{description}}"></td>
+            <td><input type="date" id="editsrartDate" value="{{srartDate}}"></td>
+            <td><input type="date" id="editdueDate" value="{{dueDate}}"></td>
+            <td><input type="text" id="editcatagory" value="{{catagory}}"></td>
+            <td><input type="text" id="editsubCatagory" value="{{subCatagory}}"></td>
+            <td><input type="number" id="editpriorty" value="{{priorty}}"></td>
+            <td><input type="text" id="editowner" value="{{owner}}"></td>
+            <td><input type="text" id="editseconderyOwner" value="{{seconderyOwner}}"></td>
+            <td><input type="text" id="editstatus" value="{{status}}"></td>
+            <td><input type="text" id="editstatusDetails" value="{{statusDetails}}"></td>
+            <td><input type="text" id="editcomments" value="{{comments}}"></td>
+            <td><button class="saveItem">save</button><button class="cancelItem">Cancel</button>{{#each errors}}<div>{{message}}</div>{{/each}}</td>
+   
+    {{else}}
+        
+            <td>{{description}}</td>
+            <td>{{srartDate}}</td>
+            <td>{{dueDate}}</td>
+            <td>{{catagory}}</td>
+            <td>{{subCatagory}}</td>
+            <td>{{priorty}}</td>
+            <td>{{owner}}</td>
+            <td>{{seconderyOwner}}</td>
+            <td>{{status}}</td>
+            <td>{{statusDetails}}</td>
+            <td>{{comments}}</td>
+            <td><button class="editItem">Edit</button><button class="deleteItem">Delete</button></td>
+       
+    {{/if}}
+    
+-->
  </template>
         

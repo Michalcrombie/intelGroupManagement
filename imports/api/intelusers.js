@@ -44,6 +44,6 @@ Intelusers.attachSchema(new SimpleSchema({
     Permission: {   
         type: String,
         label: "Permission",
-        allowedValues: ["Manager","Sub manager","Employee"]
+        allowedValues: ["Manager","Sub manager","Maintenance manager","System lead","Employee"]
     },
 }));

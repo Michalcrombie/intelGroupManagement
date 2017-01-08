@@ -1,7 +1,7 @@
 ﻿import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Events } from '../api/events.js';
-import { Session } from 'meteor/session'
+import { Session } from 'meteor/session';
 
 import './add-edit-event-modal.html';
 

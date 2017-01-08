@@ -4,8 +4,10 @@ import { ReactiveDict } from 'meteor/reactive-dict';
  
 import { Tasks } from '../api/tasks.js';
 import { Ars } from '../api/ars.js';
+import './add-edit-ar-modal.js';
 
 import './ar.html';
+import './edit_ar_row.html';
 
 
 
@@ -31,7 +33,10 @@ Template.AR.helpers({
             collection:Ars,
             rowsPerPage:10,
             showFilter:true,
-            fields:['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner','priorty','status','statusDetails','comments']
+            fields:['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner',
+                'priorty','status','statusDetails','comments', {
+                    key: 'location', label: 'location', tmpl: Template.editArRow
+                }]
         };
     },
     //incompleteCount() {
@@ -40,6 +45,35 @@ Template.AR.helpers({
     incompleteCount() {
         return Ars.find().count();
     },
+
+});
+
+//edit
+
+Template.AR.onRendered( () => {
+    $( '#ar-edit' ).ReactiveDict({
+
+        ars( start, end, timezone, callback ) {
+            let data = Ars.find().fetch().map( (ar ) => {
+                ar.editable = true;
+                return ar;
+            });
+            if ( data ) {
+                callback( data );
+            }
+        },
+        
+        eventClick( ar ) {
+            Session.set( 'arModal', { type: 'edit', ar: ar._id } );
+            $( '#add-edit-ar-modal' ).modal( 'show' );
+        }
+    });
+
+    Tracker.autorun( () => {
+        Ars.find().fetch();
+        $( '#ar-edit' ).ReactiveDict( 'refetchArs' );
+    });
+
 });
 
 /*Template.AR.events({
@@ -83,7 +117,7 @@ var manipulateTasks = function (tasks) {
     });
     return result;
 };
-
+*/
 Template.AR.events({
     'click .toggle-checked'() {
         // Set the checked property to the opposite of its current value
@@ -94,4 +128,4 @@ Template.AR.events({
     'click .delete'() {
         Ars.remove(this._id);
     },
-});*/
+});

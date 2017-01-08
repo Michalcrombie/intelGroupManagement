@@ -10,7 +10,7 @@ Meteor.startup(() => {
     Tasks = new Mongo.Collection("tasks");
 
   smtp = {
-      username: 'intelgroupmanagment@gmail.com',
+    username: 'intelgroupmanagment@gmail.com',
     password: '12345678intel',
     server:   'smtp.gmail.com',
     port: 465
@@ -34,14 +34,44 @@ Meteor.methods({
         });
 
     },
+    editArs: function ( ar ) {
+        check( ar, {
+            _id: String,
+            description: Match.Optional( String ),
+            srartDate: Match.Optional( Date ),
+            dueDate: Match.Optional( Date ),
+            catagory: Match.Optional( String ),
+            subCatagory:Match.Optional( String ),
+            priorty:Match.Optional( Number ),
+            owner:Match.Optional( String ),
+            seconderyOwner:Match.Optional( String ),
+            status:Match.Optional( String ),
+            statusDetails:Match.Optional( String ),
+            comments:Match.Optional( String ),
+        });
+        try {
+            return Ars.update( ar._id, {
+                $set: ar
+            });
+        } catch ( exception ) {
+            throw new Meteor.Error( '500', `${ exception }` );
+        }
+    },
+    removeArs( ar ) {
+        check( ar, String );
+
+        try {
+            return Ars.remove( ar );
+        } catch ( exception ) {
+            throw new Meteor.Error( '500', `${ exception }` );
+        }
+    },
 
   insertIntelusers: function(doc) {
       Intelusers.insert(doc);
       console.log(doc); 
   }
 });
-
-
 
 Meteor.methods({
     addEvent( event ) {

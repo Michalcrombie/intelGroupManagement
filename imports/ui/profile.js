@@ -1,4 +1,5 @@
 ﻿import { Template } from 'meteor/templating';
+import { Tracker } from 'meteor/tracker'
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Intelusers } from '../api/intelusers.js';
 import './profile.html';
@@ -8,18 +9,41 @@ Template.Profile.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
 });
 
+
 Template.Profile.helpers({
-    intelusers() {
-        return Intelusers;
+    users() {
+        return Users.find().fetch();
+       //return manipulateUsers(Users.find())
+    }
+});
+
+
+Template.Profile.onCreated(function bodyOnCreated() {
+    this.state = new ReactiveDict();
+});
+
+Template.Profile.helpers({
+    users() {
+        return Meteor.users.find({});
     },
+
     settings: function(){
         return {
-            collection:Intelusers,
+            collection:Meteor.users.find({}) ,
             rowsPerPage:10,
             showFilter:true,
-            fields:['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner','priorty','status','statusDetails','comments']
+            fields:['createdAt','services','employee_id','first_name','last_name','office_address','email_adress','qualifications','sub_qualifications',
+                'group_name','Permission'
+            ]
         };
     },
+});*/
+
+
+Tracker.autorun(function () {
+    Meteor.subscribe("userData");
+    Meteor.subscribe("allUserData");
     
 });
-*/
+
+

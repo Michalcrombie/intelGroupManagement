@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session';
-
+import { Tracker } from 'meteor/tracker'
 import { Ars } from '../imports/api/ars.js';
 import { Intelusers } from '../imports/api/intelusers.js';
 import { Events } from '../imports/api/events.js';
@@ -78,7 +78,7 @@ Meteor.methods({
   }*/
     insertIntelusers: function(doc) {
         Meteor.users.update({_id: Meteor.userId()}, {$set: doc});
-    }
+    },
 });
 
 Meteor.methods({
@@ -140,4 +140,13 @@ Accounts.onCreateUser(function(options, user) {
   };
   _.extend(user, newFields);
   return user;
+});
+
+Meteor.publish("userData", function () {
+    return Meteor.users.find({_id: this.userId},
+        {fields: {'first_name': 1, 'last_name': 1}});
+});
+
+Meteor.publish("allUserData", function () {
+    return Meteor.users.find({}, {fields: {'nested.things': 1}});
 });

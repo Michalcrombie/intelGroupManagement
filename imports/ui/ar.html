@@ -2,9 +2,16 @@
     <div class="container">
         <style>
             h1 {
-                color: #ffffff;
+                color: #180f34;
                 font-family: verdana;
                 font-size: 300%;
+                text-shadow: 2px 2px 4px #000000;
+            }
+            b {
+                color: #180f34;
+                font-family: verdana;
+                font-size: 200%;
+                
             }
         </style>
         <header>
@@ -34,39 +41,5 @@
 
              <span class="text"><strong>{{username}}</strong> - {{text}}</span>
          </li>-->
-        <!--edit
-    {{#if editing}}
-     
-            <td><input type="text" id="editdescription" value="{{description}}"></td>
-            <td><input type="date" id="editsrartDate" value="{{srartDate}}"></td>
-            <td><input type="date" id="editdueDate" value="{{dueDate}}"></td>
-            <td><input type="text" id="editcatagory" value="{{catagory}}"></td>
-            <td><input type="text" id="editsubCatagory" value="{{subCatagory}}"></td>
-            <td><input type="number" id="editpriorty" value="{{priorty}}"></td>
-            <td><input type="text" id="editowner" value="{{owner}}"></td>
-            <td><input type="text" id="editseconderyOwner" value="{{seconderyOwner}}"></td>
-            <td><input type="text" id="editstatus" value="{{status}}"></td>
-            <td><input type="text" id="editstatusDetails" value="{{statusDetails}}"></td>
-            <td><input type="text" id="editcomments" value="{{comments}}"></td>
-            <td><button class="saveItem">save</button><button class="cancelItem">Cancel</button>{{#each errors}}<div>{{message}}</div>{{/each}}</td>
-   
-    {{else}}
-        
-            <td>{{description}}</td>
-            <td>{{srartDate}}</td>
-            <td>{{dueDate}}</td>
-            <td>{{catagory}}</td>
-            <td>{{subCatagory}}</td>
-            <td>{{priorty}}</td>
-            <td>{{owner}}</td>
-            <td>{{seconderyOwner}}</td>
-            <td>{{status}}</td>
-            <td>{{statusDetails}}</td>
-            <td>{{comments}}</td>
-            <td><button class="editItem">Edit</button><button class="deleteItem">Delete</button></td>
-       
-    {{/if}}
-    
--->
  </template>
         

@@ -21,3 +21,4 @@ Template.ProfileEdit.helpers({
     },
     
 });
+/**/

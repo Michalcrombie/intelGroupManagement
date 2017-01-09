@@ -1,8 +1,8 @@
 
 body {
   font-family: sans-serif;
-  background-color: #444;
-  /*background-image: linear-gradient(to bottom, #444, #eee 100%);*/
+  background-color: #99bdd8;
+  background-image: linear-gradient(to bottom, #99bdd8, #eee 100%);
   background-attachment: fixed;
  
   position: absolute;
@@ -265,7 +265,7 @@ header .hide-completed {
     background: #fff !important;
 }
 
-  .fc-content {
+.fc-content {
     color: #444;
   }
 

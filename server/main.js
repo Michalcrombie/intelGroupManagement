@@ -72,9 +72,13 @@ Meteor.methods({
     },
 
   insertIntelusers: function(doc) {
+<<<<<<< HEAD
       Intelusers.insert(doc);
       console.log(doc); 
   }*/
+    insertIntelusers: function(doc) {
+        Meteor.users.update({_id: Meteor.userId()}, {$set: doc});
+    }
 });
 
 Meteor.methods({
@@ -120,4 +124,20 @@ Meteor.methods({
             throw new Meteor.Error( '500', `${ exception }` );
         }
     }
+});
+
+Accounts.onCreateUser(function(options, user) {
+  var newFields = {
+    employee_id: "",
+    first_name: "",
+    last_name: "",
+    office_address: "",
+    email_adress: "",
+    qualifications: "",
+    sub_qualifications: "",
+    group_name: "",
+    Permission:""
+  };
+  _.extend(user, newFields);
+  return user;
 });

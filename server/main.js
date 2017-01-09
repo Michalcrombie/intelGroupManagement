@@ -145,9 +145,17 @@ Meteor.publish(null, function() {
     return Meteor.users.find({
       _id: this.userId
     }, {
-      fields: {
-        'first_name': 1,
-      }
+        fields: {
+            'employee_id':1,
+            'first_name': 1,
+            'last_name':1,
+            'office_address':1,
+            'email_adress':1,
+            'qualifications':1,
+            'sub_qualifications':1,
+            'Permission':1,
+      },
+  
     });
   } else {
     return this.ready();

@@ -7,11 +7,24 @@
                 font-size: 300%;
                 text-shadow: 2px 2px 4px #000000;
             }
+            p {
+                color: #180f34;
+                font-family: verdana;
+                font-size: 150%;
+                text-shadow: 2px 2px 4px #000000;
+            }
         </style>
         <header>
             <h1>My profile</h1>
         </header>
         <a href="/ProfileEdit">Edit</a>
+            <p>Employee ID: {{employee_id}}</p>
             <p>First name: {{firstName}}</p>
+            <p>Last name: {{lastName}}</p>
+            <p>Office address: {{office_address}}</p>
+            <p>Email: {{email_adress}}</p>
+            <p>Qualifications: {{qualifications}}</p>
+            <p>Sub qualifications: {{sub_qualifications}}</p>
+            <p>Permission: {{Permission}}</p>
     </div>
 </template>

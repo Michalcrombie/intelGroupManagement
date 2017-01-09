@@ -1,8 +1,4 @@
-﻿import { Mongo } from 'meteor/mongo';
- 
-export const Intelusers = new Mongo.Collection("intelusers");
-
-Intelusers.attachSchema(new SimpleSchema({
+﻿export const userSchema = new SimpleSchema({
     employee_id: {
         type: String,
         label: "employee ID",
@@ -46,4 +42,5 @@ Intelusers.attachSchema(new SimpleSchema({
         label: "Permission",
         allowedValues: ["Manager","Sub manager","Maintenance manager","System lead","Employee"]
     },
-}));
+});
+Meteor.users.attachSchema(userSchema);

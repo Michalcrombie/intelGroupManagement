@@ -1,8 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Session } from 'meteor/session';
-import { Tracker } from 'meteor/tracker'
 import { Ars } from '../imports/api/ars.js';
-import { Intelusers } from '../imports/api/intelusers.js';
 import { Events } from '../imports/api/events.js';
 
 Meteor.startup(() => {
@@ -74,7 +71,7 @@ Meteor.methods({
   insertIntelusers: function(doc) {
 <<<<<<< HEAD
       Intelusers.insert(doc);
-      console.log(doc); 
+      console.log(doc);
   }*/
     insertIntelusers: function(doc) {
         Meteor.users.update({_id: Meteor.userId()}, {$set: doc});
@@ -142,11 +139,17 @@ Accounts.onCreateUser(function(options, user) {
   return user;
 });
 
-Meteor.publish("userData", function () {
-    return Meteor.users.find({_id: this.userId},
-        {fields: {'first_name': 1, 'last_name': 1}});
-});
+Meteor.publish(null, function() {
 
-Meteor.publish("allUserData", function () {
-    return Meteor.users.find({}, {fields: {'nested.things': 1}});
+  if (this.userId != null) {
+    return Meteor.users.find({
+      _id: this.userId
+    }, {
+      fields: {
+        'first_name': 1,
+      }
+    });
+  } else {
+    return this.ready();
+  }
 });

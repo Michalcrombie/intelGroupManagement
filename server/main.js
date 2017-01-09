@@ -34,7 +34,11 @@ Meteor.methods({
         });
 
     },
-    editArs: function ( ar ) {
+    editArs: function(doc) {
+        Ars.insert(doc);
+        console.log(doc);
+    },
+   /*editArs: function ( ar ) {
         check( ar, {
             _id: String,
             description: Match.Optional( String ),
@@ -70,7 +74,7 @@ Meteor.methods({
   insertIntelusers: function(doc) {
       Intelusers.insert(doc);
       console.log(doc); 
-  }
+  }*/
 });
 
 Meteor.methods({

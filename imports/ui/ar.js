@@ -4,7 +4,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
  
 import { Tasks } from '../api/tasks.js';
 import { Ars } from '../api/ars.js';
-import './add-edit-ar-modal.js';
+//import './add-edit-ar-modal.js';
 
 import './ar.html';
 import './edit_ar_row.html';
@@ -19,15 +19,7 @@ Template.AR.helpers({
   ars() {
     return Ars;
   },
-   /* ars() {
-        const instance = Template.instance();
-        if (instance.state.get('hideCompleted')) {
-            // If hide completed is checked, filter tasks
-            return Ars.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
-        }
-        // Otherwise, return all of the tasks
-        return Ars.find({}, { sort: { createdAt: -1 } });
-    },*/
+
    settings: function(){
         return {
             collection:Ars,
@@ -39,9 +31,7 @@ Template.AR.helpers({
                 }]
         };
     },
-    //incompleteCount() {
-       // return Ars.find({ checked: { $ne: true } }).count();
-    //},
+
     incompleteCount() {
         return Ars.find().count();
     },
@@ -49,7 +39,7 @@ Template.AR.helpers({
 });
 
 //edit
-
+/*
 Template.AR.onRendered( () => {
     $( '#ar-edit' ).ReactiveDict({
 
@@ -75,7 +65,7 @@ Template.AR.onRendered( () => {
     });
 
 });
-
+*/
 /*Template.AR.events({
     'submit .new-ar'(event) {
         // Prevent default browser form submit
@@ -129,3 +119,15 @@ Template.AR.events({
         Ars.remove(this._id);
     },
 });
+
+
+
+   /* ars() {
+        const instance = Template.instance();
+        if (instance.state.get('hideCompleted')) {
+            // If hide completed is checked, filter tasks
+            return Ars.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
+        }
+        // Otherwise, return all of the tasks
+        return Ars.find({}, { sort: { createdAt: -1 } });
+    },*/

@@ -1,15 +1,11 @@
-﻿
-import { Template } from 'meteor/templating';
+﻿import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
- 
 import { Tasks } from '../api/tasks.js';
 import { Ars } from '../api/ars.js';
-//import './add-edit-ar-modal.js';
 
 import './ar.html';
-import './edit_ar_row.html';
-
-
+//import './ar-edit.js';
+import './ar-add.js';
 
 Template.AR.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
@@ -27,11 +23,10 @@ Template.AR.helpers({
             showFilter:true,
             fields:['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner',
                 'priorty','status','statusDetails','comments', {
-                    key: 'location', label: 'location', tmpl: Template.editArRow
+                    key: '', label: '', tmpl: Template.editArRow
                 }]
         };
     },
-
     incompleteCount() {
         return Ars.find().count();
     },

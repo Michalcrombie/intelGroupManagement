@@ -5,7 +5,7 @@ import './home.html';
 
 Router.configure({
     // the default layout
-    layoutTemplate: 'mainSide'
+    layoutTemplate: 'mainSide',
 });
 
 Router.route('/', function () {
@@ -35,5 +35,13 @@ Router.route('/', function () {
 
  Router.route('/Statistics', function () {
      this.render('Statistics');
+     this.layout('mainSide');
+ });
+ Router.route('/ProfileEdit', function () {
+     this.render('ProfileEdit');
+     this.layout('mainSide');
+ });
+ Router.route('/ARAdd', function () {
+     this.render('ARAdd');
      this.layout('mainSide');
  });

@@ -3,7 +3,7 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { Ars } from '../api/ars.js';
 import { Session } from 'meteor/session';
 
-import './edit_ar_row.html';
+
 import './add-edit-ar-modal.html';
 
 

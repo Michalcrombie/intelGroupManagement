@@ -1,12 +1,11 @@
-﻿import { Template } from 'meteor/templating';
+﻿/*import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Ars } from '../api/ars.js';
 import { Session } from 'meteor/session';
 
-import './edit_ar_row.html';
-import './add-edit-ar-modal.html';
+import './ar-edit.html';
 
-Template.AR.events({
+Template.editArRow.events({
     'click .edit-button'() {
         // Set the checked property to the opposite of its current value
         Ars.update(this._id, {
@@ -15,3 +14,4 @@ Template.AR.events({
     },
 
 });
+*/

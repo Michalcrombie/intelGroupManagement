@@ -1,4 +1,4 @@
-﻿<template name="Profile">
+﻿<template name="ARAdd">
     <div class="container">
         <style>
             h1 {
@@ -8,8 +8,8 @@
             }
         </style>
         <header>
-            <h1>My profile</h1>
+            <h1>Add a new AR </h1>
         </header>
-        <a href="/ProfileEdit">Edit</a>
+       <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>
     </div>
 </template>

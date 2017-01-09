@@ -1,14 +1,13 @@
 ﻿import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Intelusers } from '../api/intelusers.js';
-import './profile.html';
-import './profile-edit.js';
-/*
-Template.Profile.onCreated(function bodyOnCreated() {
+import './profile-edit.html';
+
+Template.ProfileEdit.onCreated(function bodyOnCreated() {
     this.state = new ReactiveDict();
 });
 
-Template.Profile.helpers({
+Template.ProfileEdit.helpers({
     intelusers() {
         return Intelusers;
     },
@@ -22,4 +21,3 @@ Template.Profile.helpers({
     },
     
 });
-*/

@@ -20,14 +20,12 @@
              </form>
              {{/if}}-->
         </header>
+        <a href="/ARAdd">Add AR</a>
         <form>
             {{> reactiveTable settings=settings}}
         </form>
-        <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>
-        <!--{{> addEditArModal }}-->
-        <div id="ar-edit"></div>
-
-
+        <!--<ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>-->
+   
     </div>
         <!-- <li class="{{#if checked}}checked{{/if}}">
              <button class="delete">&times;</button>

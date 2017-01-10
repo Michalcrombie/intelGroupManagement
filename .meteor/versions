@@ -34,7 +34,6 @@ ecmascript-runtime@0.3.15
 ejson@1.0.13
 email@1.1.18
 es5-shim@4.6.15
-f3r:download-collection-csv@0.0.9
 fastclick@1.0.13
 fortawesome:fontawesome@4.4.0_1
 fourseven:scss@3.8.1
@@ -59,6 +58,7 @@ iron:url@1.0.11
 jquery@1.11.10
 launch-screen@1.0.12
 less@2.6.5
+lfergon:exportcsv@0.0.8
 livedata@1.0.18
 localstorage@1.0.12
 logging@1.1.16

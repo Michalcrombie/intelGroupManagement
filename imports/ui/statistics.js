@@ -1,6 +1,7 @@
 ﻿import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict'; 
 import { Tasks } from '../api/tasks.js';
+import { Ars } from '../api/ars.js';
 import './statistics.html';
 
 
@@ -40,19 +41,22 @@ Template.Statistics.testGraph1 = function() {
                 beta: 0
             },
             name: 'genre',
-            data: manipulateTasks(Tasks.find())
+            data: manipulateArs_Done(Ars.find())
         }]
     };
 };
 
-var manipulateTasks = function(tasks) {
-    var result = [["done", 0],["pending", 0]];
-    tasks.forEach(function(task){
-        if (Meteor.userId() === task.owner) {
-            if (task.checked) {
+var manipulateArs_Done= function(ars) {
+    var result = [["Done", 0],["In process", 0],["Open", 0]];
+    ars.forEach(function(ar){
+        if (Meteor.user().username === ar.owner) {
+            if (ar.status === "Done") {
                 result[0][1] ++;
-            } else {
+            } else if (ar.status === "In process"){
                 result[1][1] ++;
+            }
+            else {
+                result[2][1] ++;
             }
         }
     });
@@ -96,19 +100,19 @@ Template.Statistics.topGenresChart = function() {
                 beta: 0
             },
             name: 'genre',
-            data: manipulateTasks_owner(Tasks.find())
+            data: manipulateArs_owner(Ars.find())
         }]
     };
 };
 
-var manipulateTasks_owner = function(tasks) {
+var manipulateArs_owner = function(ars) {
     var result = {};
-    tasks.forEach(function(task){
-        if (Meteor.userId() === task.owner && !task.checked ){
-            if (result[task.text]) {
-                result[task.text] ++;
+    ars.forEach(function(ar){
+        if (Meteor.user().username === ar.owner ){        //&& !task.checked
+            if (result[ar.description]) {
+                result[ar.description] ++;
             } else {
-                result[task.text] = 1;
+                result[ar.description] = 1;
             }
         }
     });

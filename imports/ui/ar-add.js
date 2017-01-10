@@ -12,3 +12,4 @@ Template.ARAdd.helpers({
         return Ars;
     },
 });
+

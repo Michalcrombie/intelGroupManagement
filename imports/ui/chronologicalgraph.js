@@ -11,10 +11,11 @@ Template.ChronologicalGraph.topGenresChart = function() {
             inverted: true
         },
         title: {
-            text: 'Chronological Graph'
+            text: ''
         },
         subtitle: {
             text: Meteor.user().username+'s AR'
+   
         },
 
         xAxis: {

@@ -120,7 +120,15 @@ Meteor.methods({
         } catch ( exception ) {
             throw new Meteor.Error( '500', `${ exception }` );
         }
-    }
+    },
+    //CSV exprt
+    /*
+    download: function() {
+        var collection = Ars.find().fetch();
+        var heading = true; // Optional, defaults to true
+        var delimiter = ";" // Optional, defaults to ",";
+        return exportcsv.exportToCSV(collection, heading, delimiter);
+   }*/
 });
 
 Accounts.onCreateUser(function(options, user) {

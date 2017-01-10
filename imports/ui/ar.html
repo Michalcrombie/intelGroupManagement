@@ -1,5 +1,5 @@
 ﻿<template name="AR">
-    <div class="container">
+    <!--<div class="container">-->
         <style>
             h1 {
                 color: #180f34;
@@ -13,9 +13,19 @@
                 font-size: 200%;
                 
             }
+             p {
+                 color:#1a4f75;
+                font-family: verdana;
+                font-size: 160%;
+                text-shadow: 2px 2px 4px #000000;
+        }
         </style>
         <header>
-            <h1>My Ar ({{incompleteCount}})</h1>
+            <h1>Actions required</h1>
+            <p>My ARs({{incompleteCount}})</p>
+            <figure>
+                <img style="user-select: none; cursor: zoom-in;position:absolute;top: 8px;right: 16px;margin-left: 150px;border-radius: 8px" src="http://moldbgonega.com/wp-content/uploads/2015/09/3-Actions-Required-To-Minimize-Flood-Damage-Mold.jpg" width="300" height="200">
+            </figure>
             <!-- <label class="hide-completed">
                  <input type="checkbox" />
                  Hide Completed Tasks
@@ -28,12 +38,17 @@
              {{/if}}-->
         </header>
         <a href="/ARAdd">Add AR</a>
+        <a href="#" id="buttonDownload">Export to CSV</a>
+        <!-- <a id="">Download csv</a>-->
         <form>
             {{> reactiveTable settings=settings}}
         </form>
+    
+        
         <!--<ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>-->
    
-    </div>
+        <!--</div>-->
+   
         <!-- <li class="{{#if checked}}checked{{/if}}">
              <button class="delete">&times;</button>
 

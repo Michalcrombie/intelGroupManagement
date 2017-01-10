@@ -4,7 +4,7 @@ import { Tasks } from '../api/tasks.js';
 import { Ars } from '../api/ars.js';
 
 import './ar.html';
-//import './ar-edit.js';
+import './ar-edit.js';
 import './ar-add.js';
 
 Template.AR.onCreated(function bodyOnCreated() {
@@ -27,11 +27,32 @@ Template.AR.helpers({
                 }]
         };
     },
-    incompleteCount() {
-        return Ars.find().count();
-    },
+   incompleteCount() {
+       return manipulateCount(Ars.find());
+   },
+
+   /* //csv export
+    'click #buttonDownload': function(Ars) {
+        var nameFile = 'fileDownloaded.csv';
+        Meteor.call('download', function(err, fileContent) {
+            if(fileContent){
+                var blob = new Blob([fileContent], {type: "text/plain;charset=utf-8"});
+                saveAs(blob, nameFile);
+            }
+        })}*/
 
 });
+
+
+var manipulateCount = function (ars) {
+    var count = 0;
+    ars.forEach (function (ar) {
+        if (Meteor.user().username === ar.owner) {
+            count++;
+        }
+    })
+    return count;
+};
 
 //edit
 /*
@@ -102,7 +123,7 @@ var manipulateTasks = function (tasks) {
     });
     return result;
 };
-*/
+
 Template.AR.events({
     'click .toggle-checked'() {
         // Set the checked property to the opposite of its current value
@@ -115,7 +136,7 @@ Template.AR.events({
     },
 });
 
-
+*/
 
    /* ars() {
         const instance = Template.instance();

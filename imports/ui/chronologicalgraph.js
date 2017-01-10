@@ -14,8 +14,8 @@ Template.ChronologicalGraph.topGenresChart = function() {
             text: ''
         },
         subtitle: {
-            text: Meteor.user().username+'s AR'
-   
+            text: Meteor.user().username+'s AR',
+
         },
 
         xAxis: {

@@ -18,7 +18,7 @@
                 font-family: verdana;
                 font-size: 160%;
                 text-shadow: 2px 2px 4px #000000;
-        }
+            }
         </style>
         <header>
             <h1>Actions required</h1>
@@ -37,8 +37,8 @@
              </form>
              {{/if}}-->
         </header>
-        <a href="/ARAdd">Add AR</a>
-        <a href="#" id="buttonDownload">Export to CSV</a>
+        <a href="/ARAdd" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;" >Add AR</a>
+        <a href="#" id="buttonDownload" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Export to CSV</a>
         <!-- <a id="">Download csv</a>-->
         <form>
             {{> reactiveTable settings=settings}}

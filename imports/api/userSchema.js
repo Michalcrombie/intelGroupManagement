@@ -1,7 +1,7 @@
 ﻿export const userSchema = new SimpleSchema({
     employee_id: {
         type: String,
-        label: "employee ID",
+        label: "WWID",
     },
     first_name: {
         type: String,
@@ -15,32 +15,32 @@
     },
     office_address: {
         type: String,
-        label: "Office address",
-        allowedValues: ["Haifa","Ptah Tikva"]
+        label: "Location",
+        allowedValues: ["Haifa","PTK", "USA"]
     },
     email_adress: {
         type: String,
-        label: "Email address",
+        label: "Email",
     },
     qualifications: {   
         type: String,
-        label: "Qualifications",
-        allowedValues: ["Services","KPIs","HW"]
+        label: "Qualifications - Category",
+        allowedValues: ["Services","KPIs","HW", "Marketing", "All", "TEMP"]
     },
     sub_qualifications: {   
         type: String,
-        label: "Sub Qualifications",
-        allowedValues: ["TLC","Thermal","DP"]
+        label: "Qualifications - Sub Category",
+        allowedValues: ["Thermal", "DP", "Regulatory", "TpT", "Methodology", "Tools", "MAC", "PHY", "Power", "Coex", "Uploads"]
     },
-    group_name: {
+    /*group_name: {
         type: String,
         label: "Group Name",
         optional: true
-    },
+    },*/
     Permission: {   
         type: String,
-        label: "Permission",
-        allowedValues: ["Manager","Sub manager","Maintenance manager","System lead","Employee"]
+        label: "Permission Type",
+        allowedValues: ["Manager","Staff","Maintenance manager","System lead","Engineer"]
     },
 });
 Meteor.users.attachSchema(userSchema);

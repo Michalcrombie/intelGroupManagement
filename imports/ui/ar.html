@@ -1,5 +1,4 @@
 ﻿<template name="AR">
-    <!--<div class="container">-->
         <style>
             h1 {
                 color: #180f34;
@@ -40,24 +39,12 @@
         </header>
         <a href="/ARAdd" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;" >Add AR</a>
         <a href="#" id="buttonDownload" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Export to CSV</a>
-        <!-- <a id="">Download csv</a>-->
         <form>
             {{> reactiveTable settings=settings}}
         </form>
-       
-        
-        <!--<ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>-->
-   
-        <!--</div>-->
-   
-        <!-- <li class="{{#if checked}}checked{{/if}}">
-             <button class="delete">&times;</button>
-
-             <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-
-             <span class="text"><strong>{{username}}</strong> - {{text}}</span>
-         </li>-->
  </template>
-  <template name="edit">
-      <a href="/AREdit" class="edit-button">Edit</a>
+
+ <template name="edit">
+        <a href="/AREdit" class="edit-button">Edit</a>
+        <a  class="delete-button">Delete</a>
 </template>      

@@ -9,7 +9,7 @@ Template.Profile.helpers({
     },
     firstName: function() {
     return Meteor.user() && Meteor.user().first_name;
-  },
+    },
 
     lastName: function() {
     return Meteor.user() && Meteor.user().last_name;

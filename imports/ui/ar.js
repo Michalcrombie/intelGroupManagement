@@ -28,7 +28,6 @@ Template.AR.helpers({
    incompleteCount() {
        return manipulateCount(Ars.find());
    }
-
 });
 
 Template.AR.events({
@@ -40,15 +39,16 @@ Template.AR.events({
         saveAs(blob, nameFile);
       }})
   },
-    /*'click .edit-button'(){
+   //'click .edit-button'(){
         // if (Meteor.user().username === ar.owner)  {
         // Set the checked property to the opposite of its current value
-        Ars.update(this._id, {
-            $set: { description: 'edited' },
-        });
+       // Ars.update(this._id, {
+         //   $set: { },
+      //  });
         // }
-    },*/
-
+  //  },
+    'click .delete-button'(){
+        Ars.remove(this._id)},
 });
 
 var manipulateCount = function (ars) {
@@ -60,29 +60,4 @@ var manipulateCount = function (ars) {
     })
     return count;
 };
-/*
-
-var manipulateFields = function (ars) {
-    var fields= {};
-    ars.forEach (function (ar){
-        if (Meteor.user().username === ar.owner) {
-            fields=['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner',
-              'priorty','status','statusDetails','comments', { key: '', label: '', tmpl: Template.editArRow}]
-            }
-        else
-        {
-            fields=['description','srartDate','dueDate','catagory','subCatagory','owner','seconderyOwner',
-                  'priorty','status','statusDetails','comments','_']
-        }
-    }),
-    fields = $.map(fields, function(value, index) {
-        return [[index,value]];
-    });
-
-    return fields;
-
-};
-
-*/
-
 

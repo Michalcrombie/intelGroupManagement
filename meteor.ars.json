@@ -1,0 +1,162 @@
+[
+{ 
+    "_id" : "WnHaCfEDNLogHWHZT", 
+    "description" : "CPU utilization improvement roadmap. Methodology suggestion", 
+    "srartDate" : ISODate("2015-12-03T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2016-05-17T00:00:00.000+0000"), 
+    "catagory" : "KPIs", 
+    "subCatagory" : "Methodology", 
+    "priorty" : NumberInt(4), 
+    "owner" : "Ofer Markovits", 
+    "seconderyOwner" : "Orem Kaidar", 
+    "status" : "Done"
+},
+{ 
+    "_id" : "8aEFusndgQteYg5LT", 
+    "description" : "Set list of PRDs for PROJECT_NAME costumer", 
+    "srartDate" : ISODate("2017-01-04T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-20T00:00:00.000+0000"), 
+    "catagory" : "Marketing", 
+    "priorty" : NumberInt(5), 
+    "owner" : "Ehud Reshef", 
+    "seconderyOwner" : "Chen Kojokaro", 
+    "status" : "Open"
+},
+{ 
+    "_id" : ObjectId("5876004c5ea636e174b55162"), 
+    "description" : "Close EAS contour upload plan.", 
+    "srartDate" : ISODate("2017-01-20T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-02-28T00:00:00.000+0000"), 
+    "catagory" : "HW", 
+    "subCatagory" : "Uploads", 
+    "priorty" : NumberInt(4), 
+    "owner" : "Nevo Idan", 
+    "status" : "Open"
+},
+{ 
+    "_id" : ObjectId("587600475ea636e174b5515f"), 
+    "description" : "PROJECT_NAME - indicate in the description we are only ready for ***. Need to propagate to contour.", 
+    "srartDate" : ISODate("2016-12-04T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2016-12-20T00:00:00.000+0000"), 
+    "subCatagory" : "Uploads", 
+    "priorty" : NumberInt(4), 
+    "owner" : "Ofer Zimmerman", 
+    "status" : "Closed"
+},
+{ 
+    "_id" : ObjectId("587600495ea636e174b55160"), 
+    "description" : "Link statistics for *** streaming application – decide in feature committee if to DCR out.", 
+    "srartDate" : ISODate("2017-01-10T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-16T00:00:00.000+0000"), 
+    "catagory" : "Services", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Ofre Hareuveni", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("5876004b5ea636e174b55161"), 
+    "description" : "Report from Qlikview – define which reports automatically needed.", 
+    "srartDate" : ISODate("2016-01-04T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2016-01-22T00:00:00.000+0000"), 
+    "catagory" : "All", 
+    "subCatagory" : "Methodology", 
+    "priorty" : NumberInt(1), 
+    "owner" : "Hana Matatov", 
+    "status" : "Deferred"
+},
+{ 
+    "_id" : ObjectId("5876004c5ea636e174b55163"), 
+    "description" : "BT Coex SAS (reduced Tx power). Understand commit due date - Why late", 
+    "srartDate" : ISODate("2017-01-07T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-18T00:00:00.000+0000"), 
+    "subCatagory" : "Coex", 
+    "priorty" : NumberInt(5), 
+    "owner" : "Oz Shalev", 
+    "seconderyOwner" : "Ofer Hareuveni", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("5876004d5ea636e174b55164"), 
+    "description" : "Methodology of managing the DCRs, and how they would be implemented in our methodology", 
+    "srartDate" : ISODate("2016-10-11T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-03-27T00:00:00.000+0000"), 
+    "subCatagory" : "Methodology", 
+    "priorty" : NumberInt(2), 
+    "owner" : "Dudi Alush", 
+    "seconderyOwner" : "Hana Matatov", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("58760aa25ea636e174b5516d"), 
+    "description" : "Provide WIFI Core Cystem Architecture new system", 
+    "srartDate" : ISODate("2016-09-01T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-03-01T00:00:00.000+0000"), 
+    "catagory" : "TEMP", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Hana Matatov", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("58760aa25ea636e174b5516e"), 
+    "description" : "Provide WIFI Core Cystem Architecture new system", 
+    "srartDate" : ISODate("2016-09-01T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-03-01T00:00:00.000+0000"), 
+    "catagory" : "TEMP", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Michal Crombie", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("58760aa25ea636e174b5516f"), 
+    "description" : "Provide WIFI Core Cystem Architecture new system", 
+    "srartDate" : ISODate("2016-09-01T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-03-01T00:00:00.000+0000"), 
+    "catagory" : "TEMP", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Dana Tubul", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("58760aa25ea636e174b55170"), 
+    "description" : "Provide WIFI Core Cystem Architecture new system", 
+    "srartDate" : ISODate("2016-09-01T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-03-01T00:00:00.000+0000"), 
+    "catagory" : "TEMP", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Netta Sultanik", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : ObjectId("58760aa25ea636e174b55171"), 
+    "description" : "Provide WIFI Core Cystem Architecture new system", 
+    "srartDate" : ISODate("2016-09-01T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-03-01T00:00:00.000+0000"), 
+    "catagory" : "TEMP", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Talya Alperowitz", 
+    "status" : "WIP"
+},
+{ 
+    "_id" : "vjByJeE9Yk82QoHmp", 
+    "description" : "Add due date for features.", 
+    "srartDate" : ISODate("2014-02-05T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2014-02-07T00:00:00.000+0000"), 
+    "catagory" : "Services", 
+    "subCatagory" : "Tools", 
+    "priorty" : NumberInt(3), 
+    "owner" : "Noam Ginsburg", 
+    "seconderyOwner" : "Ofer Markovits", 
+    "status" : "Done"
+},
+{ 
+    "_id" : ObjectId("5876003d5ea636e174b5515e"), 
+    "description" : "Update delivery plan with new items targets for all projects.", 
+    "srartDate" : ISODate("2017-01-02T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-25T00:00:00.000+0000"), 
+    "catagory" : "All", 
+    "priorty" : NumberInt(2), 
+    "owner" : "Ofer Hareuveni", 
+    "seconderyOwner" : "Chen Kojokaro", 
+    "status" : "WIP"
+}
+]

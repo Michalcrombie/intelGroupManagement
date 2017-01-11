@@ -55,7 +55,9 @@ var manipulateCount = function (ars) {
     var count = 0;
     ars.forEach (function (ar) {
         if (Meteor.user().username === ar.owner) {
-            count++;
+            if (ar.status == "Open" || ar.status == "WIP") {
+                count++;
+            }
         }
     })
     return count;

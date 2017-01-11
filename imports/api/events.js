@@ -35,7 +35,11 @@ let EventsSchema = new SimpleSchema({
     'guests': {
         type: Number,
         label: 'The number of guests expected at this event.'
-    }
+    },
+    'Names_of_external_guests': {
+        type: String,
+        label: 'The names of external guests expected at this event.'
+}
 });
 
 Events.attachSchema(EventsSchema);

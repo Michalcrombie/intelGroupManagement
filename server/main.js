@@ -31,10 +31,11 @@ Meteor.methods({
         });
 
     },
-    editArs: function(doc) {
-        Meteor.ars.update({_id: Ars._id}, {$set: doc});
-    },
-   /*editArs: function ( ar ) {
+    /*editArs: function(doc) {
+       Meteor.ars.update({_id: Ars._id}, {$set: doc});
+     }, 
+    
+    editArs: function ( ar ) {
         check( ar, {
             _id: String,
             description: Match.Optional( String ),
@@ -48,7 +49,7 @@ Meteor.methods({
             status:Match.Optional( String ),
             statusDetails:Match.Optional( String ),
             comments:Match.Optional( String ),
-        });
+        }); 
         try {
             return Ars.update( ar._id, {
                 $set: ar
@@ -56,22 +57,17 @@ Meteor.methods({
         } catch ( exception ) {
             throw new Meteor.Error( '500', `${ exception }` );
         }
-    },
+  },
+   
     removeArs( ar ) {
         check( ar, String );
-
         try {
             return Ars.remove( ar );
         } catch ( exception ) {
             throw new Meteor.Error( '500', `${ exception }` );
         }
     },
-
-  insertIntelusers: function(doc) {
-<<<<<<< HEAD
-      Intelusers.insert(doc);
-      console.log(doc);
-  }*/
+*/
     insertIntelusers: function(doc) {
         Meteor.users.update({_id: Meteor.userId()}, {$set: doc});
     },
@@ -84,7 +80,8 @@ Meteor.methods({
             start: String,
             end: String,
             type: String,
-            guests: Number
+            guests: Number,
+            Names_of_external_guests:String
         });
 
         try {
@@ -100,7 +97,8 @@ Meteor.methods({
             start: String,
             end: String,
             type: Match.Optional( String ),
-            guests: Match.Optional( Number )
+            guests: Match.Optional( Number ),
+            Names_of_external_guests: Match.Optional( String )
         });
 
         try {

@@ -12,4 +12,4 @@ Template.ProfileEdit.helpers({
         return userSchema;
     }
 });
-/**/
+

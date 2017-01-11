@@ -12,53 +12,57 @@ Ars.attachSchema(new SimpleSchema({
   srartDate: {
       type: Date,
       label: "Start Date",
-      //optional: true
+      defaultValue: moment().format() ,
   },
   dueDate: {
       type: Date,
       label: "Due Date",
-      //optional: true
+      defaultValue: moment().format() ,
   },
   catagory: {
       type: String,
       label: "catagory",
-      allowedValues: ["Services","KPIs","HW"]
+      allowedValues: ["Services","KPIs","HW"],
+      defaultValue:"Services"
   },
   subCatagory: {
       type: String,
       label: "Sub Catagory",
-      allowedValues: ["TLC","Thermal","DP"]
+      allowedValues: ["TLC","Thermal","DP"],
+      defaultValue:"TLC"
   },
   priorty: {
     type: Number,
     label: "Priorty",
-    min: 0
+    min: 0,
+    defaultValue:0 ,
   },
   owner: {
     type: String,
     label: "Owner",
-    //optional: true
+    defaultValue:"none" ,
   },
   seconderyOwner: {
       type: String,
       label: "Secondery Owner",
-      //optional: true
+      defaultValue:"none" ,
   },
   status: {
       type: String,
       label: "Status",
       allowedValues: ["Open","In process","Done"],
-      //optional: true
+      defaultValue:"Open",
   },
   statusDetails: {
       type: String,
       label: "Status Details",
-      //optional: true
+      defaultValue:"none" ,
   },
   comments: {
     type: String,
     label: "Comments",
     optional: true,
-    max: 1000
+    max: 1000,
+    defaultValue:"none" ,
   }
 }));

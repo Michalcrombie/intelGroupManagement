@@ -45,3 +45,7 @@ Router.route('/', function () {
      this.render('ARAdd');
      this.layout('mainSide');
  });
+ Router.route('/AREdit', function () {
+     this.render('editArRow');
+     this.layout('mainSide');
+ });

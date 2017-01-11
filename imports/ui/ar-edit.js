@@ -5,12 +5,15 @@ import { Session } from 'meteor/session';
 
 import './ar-edit.html';
 
-Template.editArRow.events({
-    'click .edit-button'() {
-        // Set the checked property to the opposite of its current value
-        Ars.update(this._id, {
-            $set: { description: 'edited' },
-        });
-    },
-
+Template.editArRow.onCreated(function bodyOnCreated() {
+    this.state = new ReactiveDict();
 });
+
+Template.editArRow.helpers({
+    ars() {
+        return Ars;
+    },
+});
+
+
+

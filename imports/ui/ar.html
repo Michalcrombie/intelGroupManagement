@@ -23,6 +23,7 @@
         <header>
             <h1>Actions required</h1>
             <p>My ARs({{incompleteCount}})</p>
+            
             <figure>
                 <img style="user-select: none; cursor: zoom-in;position:absolute;top: 8px;right: 16px;margin-left: 150px;border-radius: 8px" src="http://moldbgonega.com/wp-content/uploads/2015/09/3-Actions-Required-To-Minimize-Flood-Damage-Mold.jpg" width="300" height="200">
             </figure>
@@ -43,7 +44,7 @@
         <form>
             {{> reactiveTable settings=settings}}
         </form>
-    
+       
         
         <!--<ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>-->
    
@@ -57,4 +58,6 @@
              <span class="text"><strong>{{username}}</strong> - {{text}}</span>
          </li>-->
  </template>
-        
+  <template name="edit">
+      <a href="/AREdit" class="edit-button">Edit</a>
+</template>      

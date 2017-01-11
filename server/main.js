@@ -32,8 +32,7 @@ Meteor.methods({
 
     },
     editArs: function(doc) {
-        Ars.insert(doc);
-        console.log(doc);
+        Meteor.ars.update({_id: Ars._id}, {$set: doc});
     },
    /*editArs: function ( ar ) {
         check( ar, {
@@ -122,11 +121,10 @@ Meteor.methods({
         }
     },
     //CSV exprt
-
     download: function() {
         var collection = Ars.find().fetch();
         var heading = true; // Optional, defaults to true
-        var delimiter = ";" // Optional, defaults to ",";
+        var delimiter = "," // Optional, defaults to ",";
         return exportcsv.exportToCSV(collection, heading, delimiter);
     }
 });

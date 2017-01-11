@@ -1,6 +1,33 @@
-﻿<template name="editArRow">
-    <a class="edit-button">Edit</a>
+﻿<template name= "editArRow">
     <div class="modal-body">
-        <!--<ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="editArs"}}</ul>-->
-    </div>
+    <style>
+        h1 {
+            color: #180f34;
+            font-family: verdana;
+            font-size: 300%;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+    <header>
+        <h1>Edit AR </h1>
+    </header>
+
+    <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="editArs"}}</ul>
+</div>
 </template>
+
+
+<!--<button onclick="myFunction()">Try it</button>
+<script>
+    function myFunction() {
+        var name = true;
+        ars.forEach(function (ar) {
+            if (Meteor.user().username === ar.owner) {
+               name = true
+            }
+        })
+    };
+</script>
+{{#if name}}
+
+{{/if}}-->

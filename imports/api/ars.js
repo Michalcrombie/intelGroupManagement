@@ -6,17 +6,18 @@ Ars.attachSchema(new SimpleSchema({
   description: {
     type: String,
     label: "AR description",
-    max: 200
+    max: 200,
+    defaultValue: "description" ,
   },
   srartDate: {
       type: Date,
       label: "Start Date",
-      optional: true
+      //optional: true
   },
   dueDate: {
       type: Date,
       label: "Due Date",
-      optional: true
+      //optional: true
   },
   catagory: {
       type: String,
@@ -36,23 +37,23 @@ Ars.attachSchema(new SimpleSchema({
   owner: {
     type: String,
     label: "Owner",
-    optional: true
+    //optional: true
   },
   seconderyOwner: {
       type: String,
       label: "Secondery Owner",
-      optional: true
+      //optional: true
   },
   status: {
       type: String,
       label: "Status",
       allowedValues: ["Open","In process","Done"],
-      optional: true
+      //optional: true
   },
   statusDetails: {
       type: String,
       label: "Status Details",
-      optional: true
+      //optional: true
   },
   comments: {
     type: String,

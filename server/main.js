@@ -165,3 +165,24 @@ Meteor.publish(null, function() {
     return this.ready();
   }
 });
+
+
+collection2 = new Mongo.Collection('collection2');
+
+Ars.find().observe ({
+    changed: function (newDocument, oldDocument){
+      //is working
+  // console.log 'update 2', collection1.update({_id: newDocument._id}, {updateOnChange: true}) 
+    // is not working
+        console.log ('insert 1');
+        if (oldDocument.owner != newDocument.owner && oldDocument.dueDate != newDocument.dueDate ){
+            collection2.insert({ ArID:oldDocument._id,ownerChanged:true , dueDateChanged:true })
+        } 
+        else if (oldDocument.owner != newDocument.owner){
+            collection2.insert({ ArID:oldDocument._id,ownerChanged:true , dueDateChanged:false })
+        }
+        else if (oldDocument.dueDate != newDocument.dueDate){
+            collection2.insert({ ArID:oldDocument._id,ownerChanged:false, dueDateChanged:true })
+        }
+
+}})

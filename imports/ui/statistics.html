@@ -8,9 +8,20 @@
             text-shadow: 2px 2px 4px #000000;
         }
     </style>
-    <h1 >Statistics</h1 >
+    <h1>Statistics</h1>
+   <!-- {{#if currentUser.Permission == Manager}} {{/if}}-->
+    <div class="col-md-6">
+        {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=BarChart}}
+    </div>
+
+    <div class="col-md-6">
         {{> highchartsHelper chartId="test1" chartWidth="100%" charHeight="100%" chartObject=testGraph1}}
+    </div>
+
+    <div class="col-md-6">
         {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
+    </div>
 </template>
-
-
+<!--<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<div id="container" style="min-width: 310px; height: 400px;position:absolute"></div>-->

@@ -11,22 +11,6 @@
     <header>
         <h1>Edit AR </h1>
     </header>
-   <!-- <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="editArs"}}</ul>-->
+        {{> quickForm collection=ars doc=this id="page-form" type="update"}}
 </div>
 </template>
-
-
-<!--<button onclick="myFunction()">Try it</button>
-<script>
-    function myFunction() {
-        var name = true;
-        ars.forEach(function (ar) {
-            if (Meteor.user().username === ar.owner) {
-               name = true
-            }
-        })
-    };
-</script>
-{{#if name}}
-
-{{/if}}-->

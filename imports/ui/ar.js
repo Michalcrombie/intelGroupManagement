@@ -30,6 +30,12 @@ Template.AR.helpers({
    }
 });
 
+Template.edit.helpers({
+  editPath() {
+    return "AREdit/"+ this._id;
+  }
+});
+
 Template.AR.events({
   'click #buttonDownload': function(Ars) {
     var nameFile = 'Group`s ARs.csv';

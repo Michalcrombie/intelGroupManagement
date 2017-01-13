@@ -1,6 +1,4 @@
-﻿import { Template } from 'meteor/templating';
- 
-import { Tasks } from '../api/tasks.js';
+﻿import { Ars } from '../api/ars.js';
 import './home.html';
 
 Router.configure({
@@ -45,7 +43,11 @@ Router.route('/', function () {
      this.render('ARAdd');
      this.layout('mainSide');
  });
- Router.route('/AREdit', function () {
-     this.render('editArRow');
+ Router.route('/AREdit/:_id', function () {
+     this.render('editArRow',{
+       data: function () {
+         return Ars.findOne({_id: this.params._id});
+       }
+     });
      this.layout('mainSide');
  });

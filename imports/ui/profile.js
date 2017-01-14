@@ -35,7 +35,18 @@ Template.Profile.helpers({
     },
     editPath() {
         return "ProfileEdit/"+ this._id;
-    }
+    },
+    textValue() {
+        var ans=true;
+        if (Meteor.user().Permission== "Maintenance manager") {
+            ans=true;
+        } 
+        else {
+            ans=false;
+        }
+        return ans;
+        ;}
+
 });
 
 

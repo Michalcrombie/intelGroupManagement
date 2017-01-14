@@ -38,7 +38,8 @@ let EventsSchema = new SimpleSchema({
     },
     'Names_of_external_guests': {
         type: String,
-        label: 'The names of external guests expected at this event.'
+        label: 'The names of external guests expected at this event.',
+        defaultValue: "None"
 }
 });
 

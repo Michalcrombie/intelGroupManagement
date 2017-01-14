@@ -11,7 +11,7 @@
                 color: #2c5b72;
                 font-family: verdana;
                 font-size: 150%;
-                <!--text-shadow: 2px 2px 4px #000000;-->
+                text-shadow: 2px 2px 4px #000000;
                 text-shadow: 1px 1px 2px #000000;
                 top: 50px;
                 right: 16px;
@@ -21,8 +21,10 @@
         <header>
             <il>
                 <h1>My profile</h1>
-                <a href="{{editPath}}" class="edit-button">Edit</a>
-                <!--<a href="/ProfileEdit" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Edit profile</a>-->
+               {{#if textValue}}
+                    <a href="{{editPath}}" class="edit-button" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Edit profile</a>
+                {{/if}}
+        
             </il>
                 <figure>
                     <img style="user-select: none; cursor: zoom-in;position:absolute;top: 8px;right: 40px;margin-left: 150px;border-radius: 8px" src="http://i2.cdn.turner.com/money/dam/assets/160419144601-intel-layoffs-780x439.jpg" width="400" height="250">

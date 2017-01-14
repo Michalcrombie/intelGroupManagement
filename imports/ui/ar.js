@@ -44,8 +44,11 @@ Template.AR.events({
         saveAs(blob, nameFile);
       }})
   },
-    'click .delete-button'(){
-        Ars.remove(this._id)},
+ 'click .delete-button'(){
+        Ars.remove(this._id)
+    },
+ 'click .edit-button'(){
+     Meteor.call('sendmail',this)},
 });
 
 var manipulateCount = function (ars) {

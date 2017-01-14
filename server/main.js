@@ -19,21 +19,36 @@ Meteor.startup(() => {
 
 Meteor.methods({
     insertArs: function(doc) {
-        if (doc.owner == Meteor.user().username || Meteor.user().Permission !== "Manager"){
+        if (doc.owner == Meteor.user().username || Meteor.user().Permission == "Manager"){
             Ars.insert(doc);
             console.log(doc);
             // // Send the e-mail
             Email.send({
-                to: "tubul.dana@gmail.com",
+                to: Meteor.user().email_adress,
                 from: "intelgroupmanagment@gmail.com",
                 subject: "Message From Intel WIFI core system architecture ",
-                text: "Hello, You got a new AR"
+                text: "Hello, You got a new AR :"+ doc.description 
             });
         };  
     },
    insertIntelusers: function(doc) {
         Meteor.users.update({_id: Meteor.userId()}, {$set: doc});
-    },
+   },
+   sendmail(doc) {
+       var usersnew = Meteor.users.find();
+       usersnew.forEach(function(user){
+           if (user.first_name==doc.owner)
+           {
+               var mail=user.email_adress;
+               Email.send({       
+                   to: mail,
+                   from: "intelgroupmanagment@gmail.com",
+                   subject: "Message From Intel WIFI core system architecture ",
+                   text: "Hello, Your AR was edited by:"+ Meteor.user().first_name
+            })
+           }
+       });
+   },
 });
 
 Meteor.methods({

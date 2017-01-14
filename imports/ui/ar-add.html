@@ -11,6 +11,6 @@
         <header>
             <h1>Add a new AR </h1>
         </header>
-       <ul>{{> quickForm collection=ars id="insertBookForm" type="method" meteormethod="insertArs"}}</ul>
+        {{> quickForm collection=ars doc=this id="page-form" type="method" meteormethod="insertArs"}}    
     </div>
 </template>

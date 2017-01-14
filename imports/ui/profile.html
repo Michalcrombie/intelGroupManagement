@@ -21,14 +21,14 @@
         <header>
             <il>
                 <h1>My profile</h1>
-                <a href="/ProfileEdit" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Edit profile</a>
+                <a href="{{editPath}}" class="edit-button">Edit</a>
+                <!--<a href="/ProfileEdit" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Edit profile</a>-->
             </il>
                 <figure>
                     <img style="user-select: none; cursor: zoom-in;position:absolute;top: 8px;right: 40px;margin-left: 150px;border-radius: 8px" src="http://i2.cdn.turner.com/money/dam/assets/160419144601-intel-layoffs-780x439.jpg" width="400" height="250">
                 </figure>
                
         </header>
-            
             <p>WWID: {{employee_id}}</p>
             <p>First Name: {{firstName}}</p>
             <p>Last Name: {{lastName}}</p>
@@ -39,3 +39,4 @@
             <p>Permission Type: {{Permission}}</p>
     </div>
 </template>
+

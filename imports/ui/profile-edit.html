@@ -1,18 +1,17 @@
 ﻿<template name="ProfileEdit">
-    <div class="container">
-        <style>
-            h1 {
-                color: #180f34;
-                font-family: verdana;
-                font-size: 300%;
-                text-shadow: 2px 2px 4px #000000;
-            }
-        </style>
-        <header>
-            <h1>Edit Profile</h1>
-        </header>
-        <ul>
-            {{> quickForm schema=userSchema id="insertBookForm1" type="method" meteormethod="insertIntelusers"}}
-        </ul>
-    </div>
+    <div class="modal-body">
+            <style>
+                h1 {
+                    color: #180f34;
+                    font-family: verdana;
+                    font-size: 300%;
+                    text-shadow: 2px 2px 4px #000000;
+                }
+            </style>
+            <header>
+                <h1>Edit Profile</h1>
+            </header>
+            {{> quickForm collection=users doc=this id="page-form" type="method" meteormethod="insertIntelusers"}}
+        </div>
 </template>
+ <!--{{> quickForm schema=userSchema id="insertBookForm1" type="method" meteormethod="insertIntelusers"}}-->

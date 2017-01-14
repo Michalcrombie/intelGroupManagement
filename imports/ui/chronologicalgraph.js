@@ -1,7 +1,6 @@
 ﻿import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Ars } from '../api/ars.js';
-import { Tasks } from '../api/tasks.js';
 import './chronologicalgraph.html';
 
 Template.ChronologicalGraph.topGenresChart = function() {

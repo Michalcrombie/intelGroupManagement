@@ -32,11 +32,6 @@
         label: "Qualifications - Sub Category",
         allowedValues: ["Thermal", "DP", "Regulatory", "TpT", "Methodology", "Tools", "MAC", "PHY", "Power", "Coex", "Uploads"]
     },
-    /*group_name: {
-        type: String,
-        label: "Group Name",
-        optional: true
-    },*/
     Permission: {   
         type: String,
         label: "Permission Type",

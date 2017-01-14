@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Ars } from '../imports/api/ars.js';
 import { Events } from '../imports/api/events.js';
+import { Changes } from '../imports/api/changes.js';
 
 Meteor.startup(() => {
     // code to run on server at startup
@@ -18,57 +19,19 @@ Meteor.startup(() => {
 
 Meteor.methods({
     insertArs: function(doc) {
-        Ars.insert(doc);
-        console.log(doc);
-        //this.unblock();
-        //
-        // // Send the e-mail
-        Email.send({
-            to: "tubul.dana@gmail.com",
-            from: "intelgroupmanagment@gmail.com",
-            subject: "Message From Intel WIFI core system architecture ",
-            text: "Hello, You got a new AR"
-        });
-
-    },
-    /*editArs: function(doc) {
-       Meteor.ars.update({_id: Ars._id}, {$set: doc});
-     }, 
-    
-    editArs: function ( ar ) {
-        check( ar, {
-            _id: String,
-            description: Match.Optional( String ),
-            srartDate: Match.Optional( Date ),
-            dueDate: Match.Optional( Date ),
-            catagory: Match.Optional( String ),
-            subCatagory:Match.Optional( String ),
-            priorty:Match.Optional( Number ),
-            owner:Match.Optional( String ),
-            seconderyOwner:Match.Optional( String ),
-            status:Match.Optional( String ),
-            statusDetails:Match.Optional( String ),
-            comments:Match.Optional( String ),
-        }); 
-        try {
-            return Ars.update( ar._id, {
-                $set: ar
+        if (doc.owner == Meteor.user().username || Meteor.user().Permission !== "Manager"){
+            Ars.insert(doc);
+            console.log(doc);
+            // // Send the e-mail
+            Email.send({
+                to: "tubul.dana@gmail.com",
+                from: "intelgroupmanagment@gmail.com",
+                subject: "Message From Intel WIFI core system architecture ",
+                text: "Hello, You got a new AR"
             });
-        } catch ( exception ) {
-            throw new Meteor.Error( '500', `${ exception }` );
-        }
-  },
-   
-    removeArs( ar ) {
-        check( ar, String );
-        try {
-            return Ars.remove( ar );
-        } catch ( exception ) {
-            throw new Meteor.Error( '500', `${ exception }` );
-        }
+        };  
     },
-*/
-    insertIntelusers: function(doc) {
+   insertIntelusers: function(doc) {
         Meteor.users.update({_id: Meteor.userId()}, {$set: doc});
     },
 });
@@ -136,7 +99,6 @@ Accounts.onCreateUser(function(options, user) {
     email_adress: "",
     qualifications: "",
     sub_qualifications: "",
-    group_name: "",
     Permission:""
   };
   _.extend(user, newFields);
@@ -166,23 +128,18 @@ Meteor.publish(null, function() {
   }
 });
 
-
-collection2 = new Mongo.Collection('collection2');
-
 Ars.find().observe ({
     changed: function (newDocument, oldDocument){
-      //is working
-  // console.log 'update 2', collection1.update({_id: newDocument._id}, {updateOnChange: true}) 
-    // is not working
-        console.log ('insert 1');
-        if (oldDocument.owner != newDocument.owner && oldDocument.dueDate != newDocument.dueDate ){
-            collection2.insert({ ArID:oldDocument._id,ownerChanged:true , dueDateChanged:true })
-        } 
-        else if (oldDocument.owner != newDocument.owner){
-            collection2.insert({ ArID:oldDocument._id,ownerChanged:true , dueDateChanged:false })
+        oldDate=oldDocument.dueDate.valueOf();
+        newDate=newDocument.dueDate.valueOf();
+        if (oldDate != newDate && oldDocument.owner !== newDocument.owner){
+            Changes.insert({ ArID:oldDocument._id,ownerChanged:true , dueDateChanged:true })
         }
-        else if (oldDocument.dueDate != newDocument.dueDate){
-            collection2.insert({ ArID:oldDocument._id,ownerChanged:false, dueDateChanged:true })
-        }
-
+        else {
+            if (oldDate != newDate){
+                Changes.insert({ ArID:oldDocument._id,ownerChanged:false, dueDateChanged:true })
+            }
+            if (oldDocument.owner != newDocument.owner){
+                Changes.insert({ ArID:oldDocument._id,ownerChanged:true , dueDateChanged:false })
+            }}
 }})

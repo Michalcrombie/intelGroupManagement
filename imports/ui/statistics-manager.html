@@ -1,0 +1,17 @@
+﻿<template name="ManagerStatistics">
+    <style>
+        h1 {
+            color: #180f34;
+            font-family: verdana;
+            font-size: 300%;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+        <h1>Manager Statistics</h1>
+    {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=barchart}}
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto; position: relative"></div>
+</template>
+
+

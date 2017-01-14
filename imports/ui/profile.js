@@ -1,4 +1,5 @@
-﻿import { Template } from 'meteor/templating';
+﻿import { Meteor } from 'meteor/meteor';
+import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import './profile.html';
 import './profile-edit.js';
@@ -32,4 +33,10 @@ Template.Profile.helpers({
     Permission: function() {
         return Meteor.user() && Meteor.user().Permission;
     },
+    editPath() {
+        return "ProfileEdit/"+ this._id;
+    }
 });
+
+
+   

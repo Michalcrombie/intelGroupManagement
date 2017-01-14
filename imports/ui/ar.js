@@ -1,6 +1,5 @@
 ﻿import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { Tasks } from '../api/tasks.js';
 import { Ars } from '../api/ars.js';
 
 import './ar.html';
@@ -45,14 +44,6 @@ Template.AR.events({
         saveAs(blob, nameFile);
       }})
   },
-   //'click .edit-button'(){
-        // if (Meteor.user().username === ar.owner)  {
-        // Set the checked property to the opposite of its current value
-       // Ars.update(this._id, {
-         //   $set: { },
-      //  });
-        // }
-  //  },
     'click .delete-button'(){
         Ars.remove(this._id)},
 });

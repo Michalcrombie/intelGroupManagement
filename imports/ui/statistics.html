@@ -8,11 +8,14 @@
             text-shadow: 2px 2px 4px #000000;
         }
     </style>
-    <h1>Statistics</h1>
-   <!-- {{#if currentUser.Permission == Manager}} {{/if}}-->
+    <header>
+        <h1>Statistics</h1>
+        <a href="/ManagerStatistics" class="btn btn-default" style="border-radius: 8px;background-color: #2c5b72;color: #fff;outline: none;font-size: 12px;padding:10px 20px; text-align: center;text-decoration: none;display: inline-block;">Manager statistics</a>
+    </header>
+    <!-- {{#if currentUser.Permission == Manager}} {{/if}}
     <div class="col-md-6">
         {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=BarChart}}
-    </div>
+    </div>-->
 
     <div class="col-md-6">
         {{> highchartsHelper chartId="test1" chartWidth="100%" charHeight="100%" chartObject=testGraph1}}
@@ -22,6 +25,4 @@
         {{> highchartsHelper chartId="test" chartWidth="100%" charHeight="100%" chartObject=topGenresChart}}
     </div>
 </template>
-<!--<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<div id="container" style="min-width: 310px; height: 400px;position:absolute"></div>-->
+

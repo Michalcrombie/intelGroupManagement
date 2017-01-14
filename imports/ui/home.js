@@ -1,4 +1,5 @@
 ﻿import { Ars } from '../api/ars.js';
+import { Meteor } from 'meteor/meteor';
 import './home.html';
 
 Router.configure({
@@ -35,8 +36,18 @@ Router.route('/', function () {
      this.render('Statistics');
      this.layout('mainSide');
  });
- Router.route('/ProfileEdit', function () {
+
+ /*Router.route('/ProfileEdit', function () {
      this.render('ProfileEdit');
+     this.layout('mainSide');
+ });*/
+
+ Router.route('/ProfileEdit/:_id', function () {
+     this.render('ProfileEdit',{
+         data: function () {
+             return Meteor.users.findOne({_id: Meteor.userId()});
+         }
+     });
      this.layout('mainSide');
  });
  Router.route('/ARAdd', function () {
@@ -49,5 +60,9 @@ Router.route('/', function () {
          return Ars.findOne({_id: this.params._id});
        }
      });
+     this.layout('mainSide');
+ });
+ Router.route('/ManagerStatistics', function () {
+     this.render('ManagerStatistics');
      this.layout('mainSide');
  });

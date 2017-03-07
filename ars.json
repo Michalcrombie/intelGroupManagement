@@ -1,0 +1,126 @@
+{ 
+    "_id" : "Fk6qrh2Dn8trK5ks7", 
+    "description" : "Schedule weekly meeting", 
+    "catagory" : "Services", 
+    "subCatagory" : "DP", 
+    "srartDate" : ISODate("2017-01-14T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-26T00:00:00.000+0000"), 
+    "priorty" : NumberInt(1), 
+    "owner" : "Michal", 
+    "seconderyOwner" : "Hana", 
+    "status" : "Deferred", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "QvuDo4TbxXaKJb8MG", 
+    "description" : "PROJECT_NAME- indicate in the description we are only ready for ***", 
+    "catagory" : "KPIs", 
+    "subCatagory" : "Methodology", 
+    "srartDate" : ISODate("2017-01-20T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-28T00:00:00.000+0000"), 
+    "priorty" : NumberInt(4), 
+    "owner" : "Ofer", 
+    "seconderyOwner" : "Hana", 
+    "status" : "Deferred", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "7dfeY2NmoEurqDnWC", 
+    "description" : "Conduct Ars review meeting", 
+    "catagory" : "All", 
+    "subCatagory" : "Tools", 
+    "srartDate" : ISODate("2017-01-15T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-22T00:00:00.000+0000"), 
+    "priorty" : NumberInt(5), 
+    "owner" : "Oren", 
+    "seconderyOwner" : "None", 
+    "status" : "WIP", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "jCew4rqgWwRdRC6Ht", 
+    "description" : "OPS review", 
+    "catagory" : "All", 
+    "subCatagory" : "Tools", 
+    "srartDate" : ISODate("2017-01-04T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-12T00:00:00.000+0000"), 
+    "priorty" : NumberInt(2), 
+    "owner" : "Oren", 
+    "seconderyOwner" : "None", 
+    "status" : "Done", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "nCcS7Nez4NAWKWfn5", 
+    "description" : "CPU utilization improvment roadmap. Metodology suggestion..", 
+    "catagory" : "KPIs", 
+    "subCatagory" : "Methodology", 
+    "srartDate" : ISODate("2016-12-06T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2016-12-31T00:00:00.000+0000"), 
+    "priorty" : NumberInt(4), 
+    "owner" : "Michal", 
+    "seconderyOwner" : "Oren", 
+    "status" : "Open", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "8dkrYniMe7QsQGh9R", 
+    "description" : "Link statistics for **** streaming application- decide in feature committee if to DCR out.", 
+    "catagory" : "Services", 
+    "subCatagory" : "DP", 
+    "srartDate" : ISODate("2017-02-10T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-02-27T00:00:00.000+0000"), 
+    "priorty" : NumberInt(3), 
+    "owner" : "Michal", 
+    "seconderyOwner" : "Ofer", 
+    "status" : "WIP", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "Bg8r4s7X63ATgmR6N", 
+    "description" : "Close EAS contour upload plan", 
+    "catagory" : "Services", 
+    "subCatagory" : "DP", 
+    "srartDate" : ISODate("2017-01-20T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-02-28T00:00:00.000+0000"), 
+    "priorty" : NumberInt(2), 
+    "owner" : "Michal", 
+    "seconderyOwner" : "Oren", 
+    "status" : "Done", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "Fr6rH7HnbTtt3pCwy", 
+    "description" : "Fill Monthly report.", 
+    "catagory" : "Services", 
+    "subCatagory" : "DP", 
+    "srartDate" : ISODate("2017-01-01T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-31T00:00:00.000+0000"), 
+    "priorty" : NumberInt(3), 
+    "owner" : "Michal", 
+    "seconderyOwner" : "None", 
+    "status" : "Open", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}
+{ 
+    "_id" : "Z9rFz8fv28YJd4ssY", 
+    "description" : "Try", 
+    "catagory" : "Services", 
+    "subCatagory" : "Regulatory", 
+    "srartDate" : ISODate("2017-01-10T00:00:00.000+0000"), 
+    "dueDate" : ISODate("2017-01-27T00:00:00.000+0000"), 
+    "priorty" : NumberInt(2), 
+    "owner" : "Michal", 
+    "seconderyOwner" : "None", 
+    "status" : "Open", 
+    "statusDetails" : "None", 
+    "comments" : "None"
+}

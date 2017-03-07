@@ -1,0 +1,44 @@
+{ 
+    "_id" : "tqbmouqMefFAxihcQ", 
+    "title" : "submit project", 
+    "start" : "2017-01-14", 
+    "end" : "2017-01-14", 
+    "type" : "Weekly meeting", 
+    "guests" : NumberInt(5)
+}
+{ 
+    "_id" : "f4o5S2LJTaD2X9Rhy", 
+    "title" : "Project presentaion", 
+    "start" : "2017-01-15", 
+    "end" : "2017-01-15", 
+    "type" : "Other", 
+    "guests" : NumberInt(5), 
+    "Names_of_external_guests" : "None"
+}
+{ 
+    "_id" : "sq78Zs5qqEcQ7hNk4", 
+    "title" : "Group monthly meeting", 
+    "start" : "2017-01-18", 
+    "end" : "2017-01-18", 
+    "type" : "Monthly meeting", 
+    "guests" : NumberInt(40), 
+    "Names_of_external_guests" : "Israel israeli"
+}
+{ 
+    "_id" : "WfuwWLwwySEbaCaAY", 
+    "title" : "Dana`s birthday", 
+    "start" : "2017-01-27", 
+    "end" : "2017-01-27", 
+    "type" : "Birthday", 
+    "guests" : NumberInt(15), 
+    "Names_of_external_guests" : "None"
+}
+{ 
+    "_id" : "sv9HnH4CvrcL5ZH7b", 
+    "title" : "Benny", 
+    "start" : "2017-01-20", 
+    "end" : "2017-01-20", 
+    "type" : "Weekly meeting", 
+    "guests" : NumberInt(5), 
+    "Names_of_external_guests" : "None"
+}

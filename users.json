@@ -1,0 +1,118 @@
+{ 
+    "_id" : "SAHxTiugjLWoWAaTf", 
+    "createdAt" : ISODate("2017-01-14T18:48:45.785+0000"), 
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$9/e5MDW8ByFcHACe7JvCN.slSlt61cuG6GPVHGj/P.0lMb4B71jJC"
+        }, 
+        "resume" : {
+            "loginTokens" : [
+
+            ]
+        }
+    }, 
+    "username" : "Noam", 
+    "employee_id" : "16675894", 
+    "first_name" : "Noam", 
+    "last_name" : "Ginsburg", 
+    "office_address" : "Haifa", 
+    "email_adress" : "noam.ginsburg@intel.com", 
+    "qualifications" : "Services", 
+    "sub_qualifications" : "Tools", 
+    "Permission" : "Engineer"
+}
+{ 
+    "_id" : "F8GNxvSQypBnRDYBm", 
+    "createdAt" : ISODate("2017-01-14T18:55:32.654+0000"), 
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$SeudicXHYEeDRUXPUJoFveZpyWXKoKbH7T9PJ7TYduOuB4vFxMIiO"
+        }, 
+        "resume" : {
+            "loginTokens" : [
+
+            ]
+        }
+    }, 
+    "username" : "Hana", 
+    "employee_id" : "11579659", 
+    "first_name" : "Hana", 
+    "last_name" : "Matatov", 
+    "office_address" : "Haifa", 
+    "email_adress" : "hana.matatov@intel.com", 
+    "qualifications" : "All", 
+    "sub_qualifications" : "Methodology", 
+    "Permission" : "Maintenance manager"
+}
+{ 
+    "_id" : "P8xQAEBaxrmk6DAiW", 
+    "createdAt" : ISODate("2017-01-14T18:57:01.882+0000"), 
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$mEftzTRRy.WbWJaI/IHlWupeOlZmrJdyn5NujStIYCZhpl1tAKhoK"
+        }, 
+        "resume" : {
+            "loginTokens" : [
+
+            ]
+        }
+    }, 
+    "username" : "Oren", 
+    "employee_id" : "10566568", 
+    "first_name" : "Oren", 
+    "last_name" : "Keidar", 
+    "office_address" : "Haifa", 
+    "email_adress" : "oren.keidar@intel.com", 
+    "qualifications" : "All", 
+    "sub_qualifications" : "Uploads", 
+    "Permission" : "Manager"
+}
+{ 
+    "_id" : "yZms4ZKfTipKEaan6", 
+    "createdAt" : ISODate("2017-01-14T19:00:50.153+0000"), 
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$KeGKgMrPrU.kn0TZ.zQgo.wBD6qfHy7X3F.X1g5oD/BOz13SBnT2a"
+        }, 
+        "resume" : {
+            "loginTokens" : [
+
+            ]
+        }
+    }, 
+    "username" : "Ofer", 
+    "employee_id" : "1445935", 
+    "first_name" : "Ofer", 
+    "last_name" : "Markovits", 
+    "office_address" : "PTK", 
+    "email_adress" : "ofer.markovits@intel.com", 
+    "qualifications" : "KPIs", 
+    "sub_qualifications" : "Methodology", 
+    "Permission" : "Engineer"
+}
+{ 
+    "_id" : "oXkNoiHuhXD5eATsd", 
+    "createdAt" : ISODate("2017-01-14T19:02:24.381+0000"), 
+    "services" : {
+        "password" : {
+            "bcrypt" : "$2a$10$WB52QhH9a8RNP9lISCebbeArkEyxth4l82hqjGBjmLNK9z8vsHcmq"
+        }, 
+        "resume" : {
+            "loginTokens" : [
+                {
+                    "when" : ISODate("2017-01-15T19:35:48.571+0000"), 
+                    "hashedToken" : "VahtrUVecKavdgXf71KilX90eE+1ZGWGUxcpcLh/z2I="
+                }
+            ]
+        }
+    }, 
+    "username" : "Michal", 
+    "employee_id" : "4573498", 
+    "first_name" : "Michal", 
+    "last_name" : "Crombie", 
+    "office_address" : "Haifa", 
+    "email_adress" : "mikmik.crombie@gmail.com", 
+    "qualifications" : "Services", 
+    "sub_qualifications" : "DP", 
+    "Permission" : "Engineer"
+}

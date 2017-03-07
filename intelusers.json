@@ -1,0 +1,22 @@
+{ 
+    "_id" : "ytRvrTNxWxWka94x6", 
+    "employee_id" : "1542", 
+    "first_name" : "Dana", 
+    "last_name" : "Tubul", 
+    "office_address" : "Haifa", 
+    "email_adress" : "tttt", 
+    "qualifications" : "Developer", 
+    "group_name" : "WIFI"
+}
+{ 
+    "_id" : "sjsYHNz6GRKFQop9v", 
+    "employee_id" : "222", 
+    "first_name" : "michal", 
+    "last_name" : "c", 
+    "office_address" : "Haifa", 
+    "email_adress" : "mkcm", 
+    "qualifications" : "KPIs", 
+    "sub_qualifications" : "Thermal", 
+    "group_name" : "c4", 
+    "Permission" : "Manager"
+}
